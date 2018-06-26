@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.1.0-web/css/all.css">
     <link rel="stylesheet" href="css/styles.css">
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
@@ -117,6 +118,7 @@
     <div class="panel panel-left panel-reveal">
         <div class="content-block">
             <p>Left panel content goes here</p>
+            <button class="logout-button" onclick="logOut();">Log Out</button>
         </div>
     </div>
 
@@ -135,9 +137,9 @@
                           Additional "open-panel" class tells app to open panel when we click on this link
                         -->
                         
-                        <!--
-                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
--->
+                       
+                        <a href="#" class="link icon-only open-panel"><i style="color: #fff" class="fas fa-ellipsis-v"></i></a>
+
                     </div>
                 </div>
             </div>
@@ -148,7 +150,7 @@
                     <!-- Scrollable page content -->
                     <div class="page-content centered">
                         <div class="content-block">
-                            <p style="font-weight: 600;color:#ab2020">Tap a user to add points:</p>
+                            <p style="font-weight: 600;color:#ab2020;text-align: center">Tap a user to add points:</p>
                              
                             <div id="insert" class="centered pointBox" style="">
                                 <table id='mainDisplay'></table>
@@ -190,21 +192,22 @@
                             <a href="about.html">About app</a><br>
 -->
                             
-                            <button class="logout-button" onclick="logOut();">Log Out</button>
+                            
                             <p style="font-weight: 600;color:#ab2020;margin-top:40px">Recent Action:</p>
                              <table id="recentAction"></table>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Bottom Toolbar-->
+            <!-- Bottom Toolbar
             <div class="toolbar">
                 <div class="toolbar-inner">
-                    <!-- Toolbar links -->
+                    
                     <a href="#" class="link">Link 1</a>
                     <a href="#" class="link">Link 2</a>
                 </div>
             </div>
+-->
         </div>
     </div>
  

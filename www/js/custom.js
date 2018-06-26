@@ -80,7 +80,12 @@
                         var points = field.points;
                         var comment = field.comment;
                         var time = field.time;
-                        $("#recentAction").append("<tr><td class='value'>" +giver+ "</td><td class='display-points'>" +receiver+ "</td><td>" +points+ "</td><td>" +comment+ "</td></tr>");
+                        if (points > 0) {
+                            $("#recentAction").append("<tr><td>" +giver+ "</td><td><i class='fas fa-arrow-right'></i></td><td>" +receiver+ "</td><td><i style='color:#32CD32' class='fas fa-arrow-up'></i></td><td>" +points+ "</td><td><em>'" +comment+ "'</em></td></tr>");
+                        }else if (points < 0){
+                           $("#recentAction").append("<tr><td>" +giver+ "</td><td><i class='fas fa-arrow-right'></i></td><td>" +receiver+ "</td><td><i style='color:#32CD32' class='fas fa-arrow-up'></i></td><td>" +points+ "</td><td><em>'" +comment+ "'</em></td></tr>");
+                        }
+                        
                         
                     });
                 }
