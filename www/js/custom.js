@@ -81,9 +81,11 @@
                         var comment = field.comment;
                         var time = field.time;
                         if (points > 0) {
-                            $("#recentAction").append("<tr><td>" +giver+ "</td><td><i class='fas fa-arrow-right'></i></td><td>" +receiver+ "</td><td><i style='color:#32CD32' class='fas fa-arrow-up'></i></td><td>" +points+ "</td><td><em>'" +comment+ "'</em></td></tr>");
+                            $("#recentAction").append("<tr><td>" +giver+ "</td><td><i style='color:#fff' class='fas fa-arrow-right'></i></td><td>" +receiver+ "</td><td><i style='color:#32CD32' class='fas fa-arrow-up'></i></td><td>" +points+ "</td><td><em>'" +comment+ "'</em></td></tr>");
                         }else if (points < 0){
-                           $("#recentAction").append("<tr><td>" +giver+ "</td><td><i class='fas fa-arrow-right'></i></td><td>" +receiver+ "</td><td><i style='color:#32CD32' class='fas fa-arrow-up'></i></td><td>" +points+ "</td><td><em>'" +comment+ "'</em></td></tr>");
+                           $("#recentAction").append("<tr><td>" +giver+ "</td><td><i style='color:#fff' class='fas fa-arrow-right'></i></td><td>" +receiver+ "</td><td><i style='color:red' class='fas fa-arrow-down'></i></td><td>" +points+ "</td><td><em>'" +comment+ "'</em></td></tr>");
+                        }else{
+                            $("#recentAction").append("<tr><td>" +giver+ "</td><td><i style='color:#fff' class='fas fa-arrow-right'></i></td><td>" +receiver+ "</td><td><i style='color:#32CD32' class='fas fa-arrow-up'></i></td><td>" +points+ "</td><td><em>'" +comment+ "'</em></td></tr>");
                         }
                         
                         
