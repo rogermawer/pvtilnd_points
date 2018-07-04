@@ -118,6 +118,9 @@
         .modal-title, .close{
             color:#32CD32;
         }
+        .hiding{
+            display: none;
+        }
        
     </style>
     
@@ -166,11 +169,13 @@
                     <!-- Scrollable page content -->
                     <div class="page-content centered">
                         <div class="content-block">
-                            <p style="font-weight: 600;color:#ab2020;">Tap a user to add points:</p>
-                             
-                            <div id="insert" class="centered pointBox" style="">
-                                <table id='mainDisplay'></table>
+                            <div class="addPoints-container hiding">
+                                <p style="font-weight: 600;color:#ab2020;">Tap a user to add points:</p>
 
+                                <div id="insert" class="centered pointBox" style="">
+                                    <table id='mainDisplay'></table>
+
+                                </div>
                             </div>
                            
 
@@ -208,9 +213,10 @@
 
                                           
                             
-                            
-                             <p style="font-weight: 600;color:#ab2020;margin-top:40px">Recent Action:</p>
-                             <table id="recentAction"></table>
+                            <div class="recentAction-container hiding">
+                                 <p style="font-weight: 600;color:#ab2020;margin-top:40px">Recent Action:</p>
+                                 <table id="recentAction"></table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -254,7 +260,13 @@
     </script>
     
     <script>
-    
+    $(document).ready(function(){
+        $('.addPoints-container').fadeIn(800);
+        setTimeout(function(){
+            $('.recentAction-container').fadeIn(800);
+        }, 300)
+        
+    });
 </script>
     
 
