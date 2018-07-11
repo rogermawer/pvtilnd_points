@@ -14,7 +14,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">
     -->
     
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://www.rogermawer.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.rogermawer.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
     
     <!-- use this one for total unsafe insanity 
     <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
@@ -134,7 +134,7 @@
                 
                 $.ajax({
                     type: "POST",
-                    url: "http://www.rogermawer.com/dev.pvtilnd_points_mobile/login.php",
+                    url: "https://www.rogermawer.com/dev.pvtilnd_points_mobile/login.php",
                     data: {uname:uname, password:password},
                     success: function(data) {
                         if (!data.error) {

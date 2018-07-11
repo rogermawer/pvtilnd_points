@@ -14,7 +14,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">
     -->
      <icon src="icon.png" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://www.rogermawer.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.rogermawer.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
     
     <!-- use this one for total unsafe insanity 
     <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
@@ -103,6 +103,9 @@
         #recentAction{
             color:#000;
         }
+        .short-box{
+            width:50px;
+        }
         .modal-content{
             border: 2px solid black;
             background: #000;
@@ -113,10 +116,14 @@
             border:2px solid;
         }
         .modal-body{
-            background:#32CD32;
+            background:#A0A0A0;
         }
         .modal-title, .close{
             color:#32CD32;
+        }
+        
+        .modal-header{
+            background-color: 
         }
         .hiding{
             display: none;
@@ -196,7 +203,7 @@
 
                                                 <input style="display:none" id="point-receiver" type="text" name="uname">
                                                 <label>Points</label><br>
-                                                <input id="pointvalue" type="tel" min="-100" max="100" name="points" required><br><br>
+                                                <input id="pointvalue" type="number" min="-100" max="100" name="points" required><br><br>
 
                                                 <textarea id="commentvalue" type="text" placeholder="comment (optional)" maxlength="50" name="comment"></textarea><br>
 
@@ -247,7 +254,7 @@
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "http://www.rogermawer.com/dev.pvtilnd_points_mobile/insert.php",
+                    url: "https://www.rogermawer.com/dev.pvtilnd_points_mobile/insert.php",
                     data: {receiver:receiver, giver:giver, points:points, comment:comment},
                     success: function(data) {
                         /* must redirect to prevent error on page refresh */
