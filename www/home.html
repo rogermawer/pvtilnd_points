@@ -60,9 +60,11 @@
         }
         
         body{
-            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-family: "helvetica", sans-serif;
         }
-        
+        #mainDisplay{
+            width: 100%;
+        }
         #mainDisplay td{
             font-size: 1.5em;
             color:black;
@@ -71,7 +73,9 @@
             color:#32CD32;
         }
         .display-points{
-            padding-left:30px;
+            padding-left:0px;
+            margin-left: auto
+            
         }
         .page{
             width:100%;
@@ -112,7 +116,7 @@
         }
         .modal-close{
             background: #000;
-            color:#32CD32;
+            color:#fff;
             border:2px solid;
         }
         .modal-body{
@@ -179,7 +183,7 @@
                             <div class="addPoints-container hiding">
                                 <p style="font-weight: 600;color:#ab2020;">Tap a user to add points:</p>
 
-                                <div id="insert" class="centered pointBox" style="">
+                                <div id="insert" class="pointBox" style="">
                                     <table id='mainDisplay'></table>
 
                                 </div>
