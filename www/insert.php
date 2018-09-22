@@ -3,6 +3,12 @@
 
  require "constants.php";
 
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $rname=test_input($_POST['receiver']);
@@ -33,12 +39,6 @@
      echo "You must be logged in";
  }
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
  
 function archive($givername, $rname, $new_points){
         require 'constants.php';
